@@ -6,6 +6,17 @@ import { SplitMedia } from "@/components/section/split-media-00";
 import { SplitMedia as SplitMedia06 } from "@/components/section/split-media-06";
 import { Testimonials } from "@/components/section/testimonials-04";
 import { CTA } from "@/components/section/cta-09";
+import {
+  CalendarCheck,
+  Bell,
+  Users,
+  RefreshCw,
+  DollarSign,
+  Ban,
+  Calendar,
+  Star,
+  Zap,
+} from "lucide-react";
 
 export default function Home() {
   return (
@@ -25,53 +36,53 @@ export default function Home() {
         subtitle="Penciled was built inside of physical therapy front offices to eliminate hundreds of hours of sending text messages in Weave."
         items={[
           {
-            icon: () => <span className="h-6 w-6" />,
+            icon: CalendarCheck,
             title: "Plan of Care",
             description: "Make sure every prescribed visit is on the schedule.",
           },
           {
-            icon: () => <span className="h-6 w-6" />,
+            icon: Bell,
             title: "Reminders",
             description:
               "Send clear, customizable reminders with easy confirmations, reschedules, and cancellations.",
           },
           {
-            icon: () => <span className="h-6 w-6" />,
+            icon: Users,
             title: "Waitlist",
             description:
               "Rapidly fill cancellations by automatically reaching out to patients.",
           },
           {
-            icon: () => <span className="h-6 w-6" />,
+            icon: RefreshCw,
             title: "Rescheduling",
             description:
               "Let patients reschedule instantly so they don't miss visits.",
           },
           {
-            icon: () => <span className="h-6 w-6" />,
+            icon: DollarSign,
             title: "Cancellation fees",
             description:
               "Require fee payment within 24 hour cancellation window.",
           },
           {
-            icon: () => <span className="h-6 w-6" />,
+            icon: Ban,
             title: "No show fees",
             description:
               "Request no show fees with no awkward human interactions.",
           },
           {
-            icon: () => <span className="h-6 w-6" />,
+            icon: Calendar,
             title: "Calendar Invites",
             description:
               "Get your visits onto patients' calendars- front and center.",
           },
           {
-            icon: () => <span className="h-6 w-6" />,
+            icon: Star,
             title: "Google reviews",
             description: "Collect reviews automatically to grow your practice.",
           },
           {
-            icon: () => <span className="h-6 w-6" />,
+            icon: Zap,
             title: "Automatic",
             description:
               "Penciled runs in the background so you can focus on your patients.",

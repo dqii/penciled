@@ -55,7 +55,7 @@ function FeatureGrid({
       {items.map((item) => (
         <div key={item.title}>
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary mb-4">
-            <item.icon className="h-8 w-8 text-primary-foreground" />
+            <item.icon className="text-primary-foreground" />
           </div>
           <h3 className="text-base font-semibold leading-7">{item.title}</h3>
           <p className="text-base leading-7 text-muted-foreground mt-1.5">
