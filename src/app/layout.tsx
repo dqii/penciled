@@ -1,5 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Navbar } from "@/components/navigation/navbar";
+import { Footer } from "@/components/section/footer-15";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,7 +32,34 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar
+            companyName="Penciled"
+            companyUrl="/"
+            links={[
+              { label: "Features", href: "/features" },
+              { label: "Results", href: "/results" },
+              { label: "Blog", href: "/blog" },
+            ]}
+            actions={
+              <>
+                <Button asChild variant="outline" size="sm">
+                  <Link href="/login">Login</Link>
+                </Button>
+                <Button asChild size="sm">
+                  <Link href="/#demo">Book a Demo</Link>
+                </Button>
+              </>
+            }
+          />
           {children}
+          <Footer
+            menuLinks={[
+              { label: "Privacy", href: "/privacy" },
+              { label: "Terms", href: "/terms" },
+              { label: "Contact", href: "/contact" },
+            ]}
+            copyright={`© ${new Date().getFullYear()} Penciled. All rights reserved.`}
+          />
         </ThemeProvider>
       </body>
     </html>

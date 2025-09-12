@@ -46,15 +46,15 @@
 
 Penciled was built inside of physical therapy front offices to eliminate hundreds of hours of sending text messages in Weave.
 
-    - Plan of Care
-    - Reminders
-    - Waitlist
-    - Rescheduling
-    - Cancellation fees
-    - No show fees
-    - Rescheduling
-    - Calendar Invites
-    - Google reviews
+    - Plan of Care: Make sure every prescribed visit is on the schedule.
+    - Reminders: Send clear, customizable reminders with easy confirmations, reschedules, and cancellations.
+    - Waitlist: Rapidly fill cancellations by automatically reaching out to patients.
+    - Rescheduling: Let patients reschedule instantly so they don't miss visits.
+    - Cancellation fees: Require fee payment within 24 hour cancellation window.
+    - No show fees: Request no show fees with no awkward human interactions.
+    - Calendar Invites: Get your visits onto patients' calendars- front and center.
+    - Google reviews: Collect reviews automatically to grow your practice.
+    - Automatic: Penciled runs in the background so you can focus on your patients.
 
     - [Book a Demo] [Learn More]
 
@@ -73,7 +73,7 @@ Penciled was built inside of physical therapy front offices to eliminate hundred
 
 5. Your success is our top priority.
 
-   - Penciled is a team of software engineers from Harvard and MIT based in San Francisco, funded by the same top-tier VCs like Y Combinator and Initialized Capital who backed Athelas and Weave on day 0. We are the fastest-shipping dev team in the industry. Our customers tell the story.
+   - Penciled is a team of software engineers from Harvard and MIT based in San Francisco, funded by same top-tier VCs like Y Combinator and Initialized Capital. We are the fastest-shipping dev team in the industry. Our customers tell the story.
 
    - (Testimonials)
 
