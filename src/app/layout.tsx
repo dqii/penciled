@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navigation/navbar";
 import { Footer } from "@/components/section/footer-15";
 import { Button } from "@/components/ui/button";
+import { PenciledWordmark } from "@/components/icons/penciled-wordmark";
 import Link from "next/link";
 import "./globals.css";
 
@@ -33,7 +34,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar
-            companyName="Penciled"
+            logo={<PenciledWordmark className="h-7 w-auto" />}
             companyUrl="/"
             links={[
               { label: "Features", href: "/features" },
@@ -53,6 +54,7 @@ export default function RootLayout({
           />
           {children}
           <Footer
+            logo={PenciledWordmark}
             menuLinks={[
               { label: "Privacy", href: "/privacy" },
               { label: "Terms", href: "/terms" },
