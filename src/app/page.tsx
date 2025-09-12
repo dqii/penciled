@@ -2,7 +2,7 @@
 
 import { Hero } from "@/components/section/hero-12";
 import { Feature } from "@/components/section/feature-13";
-import { SplitMedia } from "@/components/section/split-media-00";
+import { SplitMedia as SplitMedia06 } from "@/components/section/split-media-06";
 import { Testimonials } from "@/components/section/testimonials-04";
 import { CTA } from "@/components/section/cta-09";
 
@@ -78,7 +78,7 @@ export default function Home() {
         ]}
       />
 
-      <SplitMedia
+      <SplitMedia06
         eyebrow="Demo"
         title="See Penciled in action"
         subtitle={
