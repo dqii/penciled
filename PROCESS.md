@@ -18,7 +18,11 @@
 13. If you are on WebPT, this is a no-brainer... (Testimonial)
 14. The future of front office for physical therapy
 
-## Feedback
+## Implementation Notes
+
+You might need to change the components to accept the props best suited for the website. For example, the Testimonials component needs to take in a role for this website, but Testimonials04, the preferred component, does not use that prop.
+
+The first version of the website probably doesn't need to retrieve the images and save locally or save again; it could just retrieve the URLs and use them. On finalization we could replace the URLs.
 
 ## Revision (Page - Landing Page)
 

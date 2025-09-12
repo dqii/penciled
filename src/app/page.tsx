@@ -2,6 +2,7 @@
 
 import { Hero } from "@/components/section/hero-12";
 import { Feature } from "@/components/section/feature-13";
+import { SplitMedia } from "@/components/section/split-media-00";
 import { SplitMedia as SplitMedia06 } from "@/components/section/split-media-06";
 import { Testimonials } from "@/components/section/testimonials-04";
 import { CTA } from "@/components/section/cta-09";
@@ -84,7 +85,15 @@ export default function Home() {
         subtitle={
           "Plan of care, reminders, and waitlist — booked automatically in WebPT"
         }
-        imageSrc="/split-media.jpg"
+        videoUrl="https://www.youtube.com/watch?v=MxhJGv71iek"
+        videoTitle="Penciled Demo - AI Front Desk for WebPT"
+      />
+
+      <SplitMedia
+        eyebrow="Quote"
+        title="Penciled saved our front offices hundreds of hours every month dealing with the waitlist. If you are on WebPT, this is a no-brainer."
+        subtitle="36x ROI · 150 visits recaptured/month · 445 hours saved/month"
+        imageSrc="https://framerusercontent.com/images/DBiK7CufeBor7JxkjNotaX4.jpg"
       />
 
       <Testimonials

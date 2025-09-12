@@ -26,9 +26,11 @@ export interface SplitMediaProps
   secondaryButtonHref?: string;
   primaryButtonVariant?: ButtonVariant;
   secondaryButtonVariant?: ButtonVariant;
-  imageSrc: string;
+  imageSrc?: string;
   imageAlt?: string;
   imageClassName?: string;
+  videoUrl?: string;
+  videoTitle?: string;
   note?: string;
 }
 
@@ -45,10 +47,20 @@ export function SplitMedia({
   imageSrc,
   imageAlt,
   imageClassName,
+  videoUrl,
+  videoTitle,
   note,
   className,
   ...props
 }: SplitMediaProps) {
+  // Convert YouTube URL to embed URL
+  const getYouTubeEmbedUrl = (url: string) => {
+    const videoId = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/)?.[1];
+    if (videoId) {
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    return url;
+  };
   return (
     <Section className={className} {...props}>
       <Container align="center">
@@ -83,13 +95,28 @@ export function SplitMedia({
           </ContentNote>
         )}
 
-        {/* Image below content */}
-        <motion.img
-          src={imageSrc}
-          alt={imageAlt || ""}
-          className={cn("w-full rounded-lg object-cover mt-12", imageClassName)}
-          {...withDelay(fadeInUp, 0.5)}
-        />
+        {/* Media below content */}
+        {videoUrl ? (
+          <motion.div
+            className="w-full mt-12 aspect-video rounded-lg overflow-hidden bg-muted"
+            {...withDelay(fadeInUp, 0.5)}
+          >
+            <iframe
+              src={getYouTubeEmbedUrl(videoUrl)}
+              title={videoTitle || "Video"}
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </motion.div>
+        ) : imageSrc ? (
+          <motion.img
+            src={imageSrc}
+            alt={imageAlt || ""}
+            className={cn("w-full rounded-lg object-cover mt-12", imageClassName)}
+            {...withDelay(fadeInUp, 0.5)}
+          />
+        ) : null}
       </Container>
     </Section>
   );

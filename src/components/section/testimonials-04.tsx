@@ -25,6 +25,7 @@ export type Testimonial = {
   image: string;
   content: string;
   name: string;
+  role?: string;
   source?: "X";
   href?: string;
 };
@@ -62,7 +63,7 @@ function TestimonialCard({ testimonial, className }: TestimonialCardProps) {
         className
       )}
     >
-      <div className="flex items-start gap-3">
+      <div className="flex items-start gap-3 mb-3">
         <ProfileAvatar
           name={testimonial.name}
           image={testimonial.image}
@@ -71,7 +72,14 @@ function TestimonialCard({ testimonial, className }: TestimonialCardProps) {
         />
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between gap-2">
-            <p className="font-semibold text-sm">{testimonial.name}</p>
+            <div>
+              <p className="font-semibold text-sm">{testimonial.name}</p>
+              {testimonial.role && (
+                <p className="text-xs text-muted-foreground mt-0.5">
+                  {testimonial.role}
+                </p>
+              )}
+            </div>
             {testimonial.source === "X" && (
               <svg
                 className="size-3.5"
@@ -83,19 +91,19 @@ function TestimonialCard({ testimonial, className }: TestimonialCardProps) {
               </svg>
             )}
           </div>
-          <p className="mt-2 text-sm break-words">
-            {testimonial.content
-              .split(/(\*\*.*?\*\*)/)
-              .map((part) =>
-                part.startsWith("**") && part.endsWith("**") ? (
-                  <strong key={part}>{part.slice(2, -2)}</strong>
-                ) : (
-                  part
-                )
-              )}
-          </p>
         </div>
       </div>
+      <p className="text-sm break-words">
+        {testimonial.content
+          .split(/(\*\*.*?\*\*)/)
+          .map((part) =>
+            part.startsWith("**") && part.endsWith("**") ? (
+              <strong key={part}>{part.slice(2, -2)}</strong>
+            ) : (
+              part
+            )
+          )}
+      </p>
     </div>
   );
 
