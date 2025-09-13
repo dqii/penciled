@@ -14,6 +14,7 @@ import {
 } from "@/components/marketing/section-content-animated";
 import { Button, type ButtonVariant } from "@/components/ui/button";
 import { fadeInUp, withDelay } from "@/lib/animation-presets";
+import { LogosTicker } from "@/components/marketing/logos-ticker";
 
 export interface HeroProps
   extends Omit<React.HTMLAttributes<HTMLElement>, "title" | "subtitle"> {
@@ -117,6 +118,71 @@ export function Hero({
             </motion.div>
           )}
         </ContentGrid>
+        
+        {/* Logos ticker section */}
+        <div className="mt-12">
+          <p className="text-center text-sm text-muted-foreground mb-6">
+            Penciled books thousands of appointments per month for physical therapists
+          </p>
+          <LogosTicker
+            items={[
+              {
+                name: "Clinic 1",
+                href: "https://framerusercontent.com/images/Ue2mZ7nCLhRjnc5tL4woLYYM8s.png"
+              },
+              {
+                name: "Clinic 2",
+                href: "https://framerusercontent.com/images/lcmjTsA4M1NXrOabhOXpv3uh8uM.png"
+              },
+              {
+                name: "Clinic 3",
+                href: "https://framerusercontent.com/images/C4UYaklWkT5jzClthVUfSisadI.png"
+              },
+              {
+                name: "Clinic 4",
+                href: "https://framerusercontent.com/images/5g3t8tGbcB1EZDPohwFVBks.png"
+              },
+              {
+                name: "Clinic 5",
+                href: "https://framerusercontent.com/images/umXo434eW8l6fdb7JnIQ0624w.png"
+              },
+              {
+                name: "Clinic 6",
+                href: "https://framerusercontent.com/images/TUQZzDw8QzIiBP3JQ8gDSeNOrU.png"
+              },
+              {
+                name: "Clinic 7",
+                href: "https://framerusercontent.com/images/H5jpWxnwZ6eKSaAUOwOVBKng.png"
+              },
+              {
+                name: "Clinic 8",
+                href: "https://framerusercontent.com/images/o3LYl1D63wVSiC6l2tbpRNtjdE.png"
+              },
+              {
+                name: "Clinic 9",
+                href: "https://framerusercontent.com/images/JKHSjDOVgTzPlnd6lMP4VMx5i5g.png"
+              },
+              {
+                name: "Clinic 10",
+                href: "https://framerusercontent.com/images/KOlTjBq0x2elOmE9zVWfK9bwVk.png"
+              },
+              {
+                name: "Clinic 11",
+                href: "https://framerusercontent.com/images/tnRd1AItTV5onVerDONpLNDlIy0.png"
+              },
+              {
+                name: "Clinic 12",
+                href: "https://framerusercontent.com/images/oOdQdNqJL0AyxyUlTczlUeWFE.png"
+              },
+              {
+                name: "Clinic 13",
+                href: "https://framerusercontent.com/images/FUZETHrAWuJVUKNebTSZiQ1Tg.png"
+              }
+            ]}
+            size="md"
+            variant="color"
+          />
+        </div>
       </Container>
     </Section>
   );
