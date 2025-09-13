@@ -20,12 +20,6 @@ export interface SplitMediaProps
   eyebrow?: React.ReactNode;
   title?: React.ReactNode;
   subtitle?: React.ReactNode;
-  primaryButtonText?: string;
-  primaryButtonHref?: string;
-  secondaryButtonText?: string;
-  secondaryButtonHref?: string;
-  primaryButtonVariant?: ButtonVariant;
-  secondaryButtonVariant?: ButtonVariant;
   imageSrc?: string;
   imageAlt?: string;
   imageClassName?: string;
@@ -38,12 +32,7 @@ export function SplitMedia({
   eyebrow,
   title,
   subtitle,
-  primaryButtonText,
-  primaryButtonHref,
-  secondaryButtonText,
-  secondaryButtonHref,
-  primaryButtonVariant = "default",
-  secondaryButtonVariant = "outline",
+
   imageSrc,
   imageAlt,
   imageClassName,
@@ -55,7 +44,9 @@ export function SplitMedia({
 }: SplitMediaProps) {
   // Convert YouTube URL to embed URL
   const getYouTubeEmbedUrl = (url: string) => {
-    const videoId = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/)?.[1];
+    const videoId = url.match(
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/
+    )?.[1];
     if (videoId) {
       return `https://www.youtube.com/embed/${videoId}`;
     }
@@ -69,24 +60,9 @@ export function SplitMedia({
           {title}
         </ContentTitle>
         {subtitle && (
-          <ContentDescription {...withDelay(fadeInUp, 0.2)}>
+          <ContentDescription margin="none" {...withDelay(fadeInUp, 0.2)}>
             {subtitle}
           </ContentDescription>
-        )}
-
-        {(primaryButtonHref || secondaryButtonHref) && (
-          <ContentActions {...withDelay(fadeInUp, 0.3)}>
-            {primaryButtonHref && (
-              <Button asChild variant={primaryButtonVariant} size="lg">
-                <Link href={primaryButtonHref}>{primaryButtonText}</Link>
-              </Button>
-            )}
-            {secondaryButtonHref && (
-              <Button asChild variant={secondaryButtonVariant} size="lg">
-                <Link href={secondaryButtonHref}>{secondaryButtonText}</Link>
-              </Button>
-            )}
-          </ContentActions>
         )}
 
         {note && (
@@ -113,7 +89,10 @@ export function SplitMedia({
           <motion.img
             src={imageSrc}
             alt={imageAlt || ""}
-            className={cn("w-full rounded-lg object-cover mt-12", imageClassName)}
+            className={cn(
+              "w-full rounded-lg object-cover mt-12",
+              imageClassName
+            )}
             {...withDelay(fadeInUp, 0.5)}
           />
         ) : null}

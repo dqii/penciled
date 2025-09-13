@@ -74,7 +74,7 @@ export function LogosTicker({
               src={item.href}
               alt={item.name ?? `Logo ${i + 1}`}
               className={cn(
-                "w-auto object-contain",
+                "w-auto object-contain rounded-full",
                 sizes[size],
                 filterClasses
               )}

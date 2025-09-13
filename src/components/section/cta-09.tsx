@@ -43,7 +43,7 @@ export function CTA({
 }: CTAProps) {
   return (
     <Section space="sm" {...props}>
-      <Container className="bg-primary/20" p="lg" align="center">
+      <Container className="bg-primary/10" p="lg" align="center">
         {eyebrow && <ContentBadge {...fadeInUp}>{eyebrow}</ContentBadge>}
 
         <ContentTitle as="h2" {...withDelay(fadeInUp, 0.1)}>

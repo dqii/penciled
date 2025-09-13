@@ -2,7 +2,7 @@
 
 import { Hero } from "@/components/section/hero-12";
 import { Feature } from "@/components/section/feature-13";
-import { SplitMedia } from "@/components/section/split-media-00";
+import { SplitMedia } from "@/components/section/case-study";
 import { SplitMedia as SplitMedia06 } from "@/components/section/split-media-06";
 import { Testimonials } from "@/components/section/testimonials-04";
 import { CTA } from "@/components/section/cta-09";
@@ -101,9 +101,31 @@ export default function Home() {
       />
 
       <SplitMedia
-        eyebrow="Quote"
-        title="Penciled saved our front offices hundreds of hours every month dealing with the waitlist. If you are on WebPT, this is a no-brainer."
-        subtitle="36x ROI · 150 visits recaptured/month · 445 hours saved/month"
+        eyebrow={
+          <>
+            <span className="font-semibold text-primary">
+              Renew Physical Therapy,
+            </span>{" "}
+            5 clinics
+          </>
+        }
+        title={
+          <span className="leading-15">
+            Penciled saved our front offices{" "}
+            <span className="bg-primary px-2">hundreds of hours</span> every
+            month dealing with the waitlist. If you are on WebPT, this is a{" "}
+            <span className="bg-primary px-2">no-brainer.</span>
+          </span>
+        }
+        subtitle={
+          <>
+            <p>Steve Mongiello, PT</p>
+            <p>
+              Owner,{" "}
+              <span className="font-semibold">Renew Physical Therapy</span>
+            </p>
+          </>
+        }
         imageSrc="https://framerusercontent.com/images/DBiK7CufeBor7JxkjNotaX4.jpg"
       />
 

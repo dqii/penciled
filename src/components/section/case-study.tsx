@@ -9,6 +9,7 @@ import {
   ContentActions,
   ContentBadge,
   ContentDescription,
+  ContentItems,
   ContentTitle,
 } from "@/components/marketing/section-content-animated";
 import { Button, type ButtonVariant } from "@/components/ui/button";
@@ -50,7 +51,7 @@ export function SplitMedia({
   return (
     <Section className={className} {...props}>
       <Container>
-        <ContentGrid columns={2} alignment="start">
+        <ContentGrid columns="2/1" alignment="center">
           <div>
             {eyebrow && <ContentBadge {...fadeInUp}>{eyebrow}</ContentBadge>}
             <ContentTitle as="h2" {...withDelay(fadeInUp, 0.1)}>
@@ -88,6 +89,30 @@ export function SplitMedia({
             />
           </motion.div>
         </ContentGrid>
+        <ContentItems margin="t">
+          <div className="flex justify-between px-8 gap-8 flex-col sm:flex-row">
+            {[
+              {
+                title: "36x ROI",
+              },
+              {
+                title: "150 visits",
+                description: "recaptured/month",
+              },
+              {
+                title: "445 hours",
+                description: "saved/month",
+              },
+            ].map((item) => (
+              <div className="text-center">
+                <p className="font-semibold text-3xl md:text-4xl lg:text-5xl">
+                  {item.title}
+                </p>
+                <p className="mt-2">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </ContentItems>
       </Container>
     </Section>
   );
