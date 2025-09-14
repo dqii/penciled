@@ -27,8 +27,8 @@ export default function Home() {
         subtitle="Penciled texts patients to schedule plans of care, send reminders, and fill cancellations — so you add visits and shorten front desk workload."
         primaryButtonText="Book a Demo"
         primaryButtonHref="#demo"
-        videoUrl="/demo.mp4"
-        videoPoster="/video-poster.jpg"
+        imageUrl="https://framerusercontent.com/images/PkhvDAuLjrHRmhf7wSYFN2GdRNs.png"
+        imageAlt="AI front desk that keeps your WebPT schedule full"
       />
 
       <Feature

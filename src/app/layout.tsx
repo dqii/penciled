@@ -56,9 +56,13 @@ export default function RootLayout({
           <Footer
             logo={PenciledWordmark}
             menuLinks={[
+              { label: "API Docs", href: "https://docs.penciled.com/introduction", external: true },
               { label: "Privacy", href: "/privacy" },
               { label: "Terms", href: "/terms" },
-              { label: "Contact", href: "/contact" },
+            ]}
+            socialLinks={[
+              { type: "linkedin", href: "https://www.linkedin.com/company/penciled" },
+              { type: "email", href: "mailto:support@penciled.com" },
             ]}
             copyright={`© ${new Date().getFullYear()} Penciled. All rights reserved.`}
           />
