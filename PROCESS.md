@@ -86,7 +86,7 @@ Penciled was built inside of physical therapy front offices to eliminate hundred
    - Find out if your practice could benefit from an AI front office assistant
    - [Book a Demo]
 
-## Revision (Page - How it Works)
+## Revision (Page - Features)
 
 1. Connect WebPT. Penciled does the rest.
 
@@ -98,11 +98,9 @@ Penciled was built inside of physical therapy front offices to eliminate hundred
 
 5. And More
 
-6. Runs in the Background
+6. Works with WebPT
 
-7. Works with WebPT
-
-8. (CTA)
+7. (CTA)
 
 ## Revision (Page - Results)
 

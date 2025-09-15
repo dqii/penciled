@@ -6,9 +6,12 @@ import { Container } from "@/components/layout/container";
 import {
   ContentTitle,
   ContentDescription,
+  ContentItems,
 } from "@/components/marketing/section-content";
 import { Section } from "@/components/layout/section";
 import { SingleInputForm } from "@/components/marketing/single-input-form-01";
+import { SavingsCalculator } from "@/components/calculator/savings-calculator";
+import { Calculator } from "lucide-react";
 
 export default function Results() {
   return (
@@ -18,8 +21,33 @@ export default function Results() {
         <Container align="center">
           <ContentTitle as="h1">See the Revenue Impact</ContentTitle>
           <ContentDescription>
-            Discover how Penciled transforms your practice's efficiency and bottom line. Calculate your potential savings and see real results from clinics just like yours.
+            Discover how Penciled transforms your practice's efficiency and
+            bottom line. Calculate your potential savings and see real results
+            from clinics just like yours.
           </ContentDescription>
+        </Container>
+      </Section>
+
+      {/* Savings Calculator Section */}
+      <Section>
+        <Container>
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <ContentTitle>Calculate your savings</ContentTitle>
+              <ContentDescription>
+                See how much time and money you can save by automating your
+                front office operations
+              </ContentDescription>
+            </div>
+            <div className="hidden sm:block">
+              <div className="size-24 bg-primary/10 rounded-xl flex items-center justify-center">
+                <Calculator className="size-12 text-primary" />
+              </div>
+            </div>
+          </div>
+          <ContentItems margin="t">
+            <SavingsCalculator />
+          </ContentItems>
         </Container>
       </Section>
 
