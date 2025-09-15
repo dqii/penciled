@@ -182,6 +182,7 @@ export function Hero({
             ]}
             size="md"
             variant="color"
+            fade={{ size: 160 }}
           />
         </div>
       </Container>
