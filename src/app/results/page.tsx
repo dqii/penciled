@@ -13,8 +13,17 @@ import { SingleInputForm } from "@/components/marketing/single-input-form-01";
 export default function Results() {
   return (
     <main>
-      {/* TODO: Add Results content here */}
+      {/* Header Section */}
+      <Section>
+        <Container align="center">
+          <ContentTitle as="h1">See the Revenue Impact</ContentTitle>
+          <ContentDescription>
+            Discover how Penciled transforms your practice's efficiency and bottom line. Calculate your potential savings and see real results from clinics just like yours.
+          </ContentDescription>
+        </Container>
+      </Section>
 
+      {/* Cost Savings Report Section */}
       <Section>
         <Container align="center">
           <ContentTitle>Get your cost savings report</ContentTitle>
