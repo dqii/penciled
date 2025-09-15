@@ -4,6 +4,12 @@ import { CTA } from "@/components/section/cta-09";
 import { CaseStudy } from "@/components/section/case-study";
 import { MediaSplit } from "@/components/section/media-split-01";
 import { Feature } from "@/components/section/feature-13";
+import { Section } from "@/components/layout/section";
+import { Container } from "@/components/layout/container";
+import {
+  ContentTitle,
+  ContentDescription,
+} from "@/components/marketing/section-content";
 import {
   RefreshCw,
   DollarSign,
@@ -16,6 +22,16 @@ import {
 export default function HowItWorks() {
   return (
     <main>
+      {/* Header Section */}
+      <Section>
+        <Container align="center">
+          <ContentTitle as="h1">How Penciled Works</ContentTitle>
+          <ContentDescription>
+            Connect your WebPT account and Penciled does the rest. Our AI automatically manages your schedule, fills cancellations, and keeps patients engaged — all integrated directly with WebPT.
+          </ContentDescription>
+        </Container>
+      </Section>
+
       {/* Plan of Care Section */}
       <MediaSplit
         eyebrow="PLAN OF CARE"
