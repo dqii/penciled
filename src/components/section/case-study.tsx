@@ -104,7 +104,7 @@ export function SplitMedia({
                 description: "saved/month",
               },
             ].map((item) => (
-              <div className="text-center">
+              <div className="text-center" key={item.title}>
                 <p className="font-semibold text-3xl md:text-4xl lg:text-5xl">
                   {item.title}
                 </p>
