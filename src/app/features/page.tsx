@@ -7,12 +7,7 @@ export default function HowItWorks() {
     <main>
       {/* TODO: Add How It Works content here */}
       
-      <CTA
-        title="See how you can grow your practice"
-        subtitle="Find out if your practice could benefit from an AI front office assistant."
-        primaryButtonText="Book a Demo"
-        primaryButtonHref="#demo"
-      />
+      <CTA />
     </main>
   );
 }

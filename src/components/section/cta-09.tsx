@@ -5,77 +5,33 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import {
   ContentActions,
-  ContentBadge,
   ContentDescription,
-  ContentNote,
   ContentTitle,
 } from "@/components/marketing/section-content-animated";
-import { Button, type ButtonVariant } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { fadeInUp, withDelay } from "@/lib/animation-presets";
 
-export interface CTAProps
-  extends Omit<React.HTMLAttributes<HTMLElement>, "title" | "subtitle"> {
-  eyebrow?: React.ReactNode;
-  title?: React.ReactNode;
-  subtitle?: React.ReactNode;
-  primaryButtonText?: string;
-  primaryButtonHref?: string;
-  secondaryButtonText?: string;
-  secondaryButtonHref?: string;
-  primaryButtonVariant?: ButtonVariant;
-  secondaryButtonVariant?: ButtonVariant;
-  note?: string;
-}
-
-export function CTA({
-  eyebrow,
-  title,
-  subtitle,
-  primaryButtonText,
-  primaryButtonHref,
-  secondaryButtonText,
-  secondaryButtonHref,
-  primaryButtonVariant = "default",
-  secondaryButtonVariant = "outline",
-  note,
-
-  ...props
-}: CTAProps) {
+export function CTA() {
+  const title = "See how you can grow your practice";
+  const subtitle = "Find out if your practice could benefit from an AI front office assistant.";
+  const primaryButtonText = "Book a Demo";
+  const primaryButtonHref = "#demo";
   return (
-    <Section space="sm" {...props}>
+    <Section space="sm">
       <Container className="bg-primary/10" p="lg" align="center">
-        {eyebrow && <ContentBadge {...fadeInUp}>{eyebrow}</ContentBadge>}
-
         <ContentTitle as="h2" {...withDelay(fadeInUp, 0.1)}>
           {title}
         </ContentTitle>
 
-        {subtitle && (
-          <ContentDescription {...withDelay(fadeInUp, 0.2)}>
-            {subtitle}
-          </ContentDescription>
-        )}
+        <ContentDescription {...withDelay(fadeInUp, 0.2)}>
+          {subtitle}
+        </ContentDescription>
 
-        {(primaryButtonHref || secondaryButtonHref) && (
-          <ContentActions {...withDelay(fadeInUp, 0.3)}>
-            {primaryButtonHref && (
-              <Button asChild variant={primaryButtonVariant} size="lg">
-                <Link href={primaryButtonHref}>{primaryButtonText}</Link>
-              </Button>
-            )}
-            {secondaryButtonHref && (
-              <Button asChild variant={secondaryButtonVariant} size="lg">
-                <Link href={secondaryButtonHref}>{secondaryButtonText}</Link>
-              </Button>
-            )}
-          </ContentActions>
-        )}
-
-        {note && (
-          <ContentNote margin="t" {...withDelay(fadeInUp, 0.4)}>
-            {note}
-          </ContentNote>
-        )}
+        <ContentActions {...withDelay(fadeInUp, 0.3)}>
+          <Button asChild variant="default" size="lg">
+            <Link href={primaryButtonHref}>{primaryButtonText}</Link>
+          </Button>
+        </ContentActions>
       </Container>
     </Section>
   );
